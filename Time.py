@@ -1,10 +1,10 @@
- class Time:
+class Time:
     def __init__(self, h, m, s):
         while m >= 60 or s >= 60:   # while the format is incorrect
-            if s >= 60: # if there are too many seconds
+            if s >= 60:  # if there are too many seconds
                 s -= 60
                 m += 1
-            if m >= 60: # if there are too many minutes
+            if m >= 60:  # if there are too many minutes
                 m -= 60
                 h += 1
 
@@ -89,5 +89,4 @@
     """
     def timeTill(self, t):
         return Time(0, 0, t.compareTo(self))
-
 
